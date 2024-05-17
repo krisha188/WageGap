@@ -1,5 +1,5 @@
 import {useState, useEffect} from "react";
-import {Navbar, Container, Nav} from "react-bootstrap";
+import {Navbar, Container, Nav, NavDropdown} from "react-bootstrap";
 import navIcon1 from "./Assets/Images/nav-icon1.svg";
 import navIcon2 from "./Assets/Images/nav-icon2.svg";
 import navIcon3 from "./Assets/Images/nav-icon3.svg";
@@ -30,37 +30,29 @@ export const NavBar = () => {
     };
 
     return (
-        <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
-            <Container>
-                <Navbar.Toggle aria-controls="basic-navbar-nav">
-                    <span className="navbar-toggler-icon"></span>
-                </Navbar.Toggle>
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
-                        <Nav.Link 
-                            href="#home" 
-                            className={activeLink === "home" ? "active navbar-link" : "navbar-link"} 
-                            onClick={() => onUpdateActiveLink('home')}
-                        >
-                            Home
-                        </Nav.Link>
-                        <Nav.Link 
-                            href="#features" 
-                            className={activeLink === "skills" ? "active navbar-link" : "navbar-link"} 
-                            onClick={() => onUpdateActiveLink('skills')}
-                        >
-                            Features
-                        {/* </Nav.Link>
-                        <Nav.Link 
-                            href="#projects" 
-                            className={activeLink === "projects" ? "active navbar-link" : "navbar-link"} 
-                            onClick={() => onUpdateActiveLink('projects')}
-                        >
-                            Umm */}
-                        </Nav.Link>
-                    </Nav>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
-    );
+    <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
+      <Container>
+        <Navbar.Toggle aria-controls="basic-navbar-nav">
+          <span className="navbar-toggler-icon"></span>
+        </Navbar.Toggle>
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+         
+
+            {/* <Nav.Link 
+              href="http://127.0.0.1:5000/"
+            >
+              Investing Advisor
+            </Nav.Link> */}
+
+            <NavDropdown title="Features" id="basic-nav-dropdown">
+              <NavDropdown.Item href="http://127.0.0.1:5000/">Salary Negotiator</NavDropdown.Item>
+              <NavDropdown.Item href="http://127.0.0.1:5000/">Investing Advisor</NavDropdown.Item>
+               
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
 };

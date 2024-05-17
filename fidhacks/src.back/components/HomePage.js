@@ -10,9 +10,9 @@ export const HomePage = () => {
             <Container>
                 <Row>
                     <Col>
-                        <span className = "tagline">FidHacks 2024</span>
-                        <p className = "about"> InvestHER is a comprehensive website dedicated to addressing the financial challenges faced by women in 2024. Despite the progress in gender equality, women still earn less than men for similar roles and qualifications across various industries, placing them at a wealth disadvantage. InvestHER aims to bridge this gap by providing resources to enhance financial literacy among women, recognizing that lower financial literacy significantly contributes to the wealth disparity. The platform offers educational materials, workshops, and personalized financial advice to empower women with the knowledge needed to manage personal finances effectively. Additionally, InvestHER acknowledges the societal expectations placed on women to take on primary caregiving roles, which often strain their financial resources. By offering support and strategies for balancing these responsibilities, InvestHER strives to help women achieve financial independence and stability.</p>
-                        <img className = "image" src={"http://localhost:3000/hercopy.png"} alt="Funnn"/>
+                        <span className = "tagline">InvestHER</span>
+                        <p className = "about">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        <img className = "image" src={"https://media.istockphoto.com/id/1474378063/vector/numbers-in-blue-falling-financial-figures-number-algebra-abstract-crowded-numbers-pattern.jpg?s=170667a&w=0&k=20&c=DpHY-XGgmBnvKMA3slZJRdBqS7MiW3K2Js1i73xBzFs="} alt="Funnn"/>
                         <span className = "features">Key Features</span>
                     </Col>
                 </Row>

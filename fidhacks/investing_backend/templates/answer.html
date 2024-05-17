@@ -1,0 +1,86 @@
+<!-- <link rel = "stylesheet" href = "{{ url_for('static', filename = 'style.css' ) }}"/> -->
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #17726D;
+}
+
+.form-container {
+    width: 300px;
+    padding: 16px;
+    background-color: #EAE4D2;
+    margin: 0 auto;
+    margin-top: 100px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.form-container2 {
+    width: 900px;
+    padding: 16px;
+    background-color: #EAE4D2;
+    margin: 0 auto;
+    margin-top: 100px;
+    border: 1px solid #B46F3E;
+    border-radius: 10px;
+}
+
+.form-container3 {
+    width: 600px;
+    padding: 16px;
+    background-color: #17726D;
+    margin: 0 auto;
+    margin-top: 100px;
+    border: 1px solid #17726D;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-top: 30px;
+    font-weight: normal;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 16px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: #B46F3E;
+}
+
+input[type=submit] {
+    background-color: #13173A;
+    color: #ffffff;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: #B46F3E;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 8px;
+}
+
+input[type=submit]:hover {
+    opacity: 0.8;
+}
+</style>
+
+<form class="form-container2">
+    <h1 style="font-family:Georgia, 'Times New Roman', Times, serif, Tahoma, sans-serif"
+        align ="center"> Invest HER investing ...
+    </h1>
+
+    <h2 align ="center">
+        <img src = "{{ url_for('static', filename = 'her.png' ) }}" style="width:250px;height:175px;" >
+    </h2>
+    <h3 align ="center" class = "form-container3">
+        <p>{{opinion}}</p>
+        <p>Breakdown is as follows: </p>
+        <p>Necessary Spending: ${{ necessary_spending | float | round(2) }}</p>
+        <p>Leisure Spending: ${{ leisure_spending | float | round(2) }}</p>
+        <p>Retirement Save-up: ${{ retirement | float | round(2) }}</p>
+        <p>High-Yield Saving Account: ${{ high_yields_saving_account | float | round(2) }}</p>
+        <p>Saving Account: ${{ saving_accnt | float | round(2) }}</p>
+        <p>Investment: ${{ investments | float | round(2) }}</p>
+        
+     </h3>
+</form>
+
