@@ -5,13 +5,15 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    def calculate_distribution(salary, family_size, people_colllege_count):
+    def calculate_distribution(salary, family_size, people_colllege_count,household_income):
+        if household_income > salary:
+            salary = household_income
         income_after_tax = 0.229321 * salary
         monthly_net = income_after_tax/12
         necessary_spending = 2160*family_size
         necessary_spending = (people_colllege_count * 500) + necessary_spending
         necessary_spending = float(necessary_spending)
-        income_after_tax =  income_after_tax - float(necessary_spending)
+        income_after_tax =  monthly_net - float(necessary_spending)
         if income_after_tax < 0 :
             opinion = "Your income is relatively low for your family size and number in college. You may need to consider cutting expenses or finding additional sources of income."
           
@@ -43,8 +45,9 @@ def index():
         salary = float(request.form['salary'])
         family_size = float(request.form['family_size'])
         num_in_college = float(request.form['num_in_college'])
+        household_income = float(request.form['household_income'])
 
-        distribution = calculate_distribution(salary, family_size, num_in_college)
+        distribution = calculate_distribution(salary, family_size, num_in_college,household_income)
         return render_template('answer.html', **distribution)
     else:
         return render_template('index.html')
