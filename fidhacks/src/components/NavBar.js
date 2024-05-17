@@ -4,6 +4,7 @@ import navIcon1 from "./Assets/Images/nav-icon1.svg";
 import navIcon2 from "./Assets/Images/nav-icon2.svg";
 import navIcon3 from "./Assets/Images/nav-icon3.svg";
 
+
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
@@ -44,18 +45,18 @@ export const NavBar = () => {
                             Home
                         </Nav.Link>
                         <Nav.Link 
-                            href="#skills" 
+                            href="#features" 
                             className={activeLink === "skills" ? "active navbar-link" : "navbar-link"} 
                             onClick={() => onUpdateActiveLink('skills')}
                         >
-                            Projects
-                        </Nav.Link>
+                            Features
+                        {/* </Nav.Link>
                         <Nav.Link 
                             href="#projects" 
                             className={activeLink === "projects" ? "active navbar-link" : "navbar-link"} 
                             onClick={() => onUpdateActiveLink('projects')}
                         >
-                            Umm
+                            Umm */}
                         </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>

@@ -48,11 +48,12 @@ nav.navbar {
   z-index: 9999;
   transition: 0.32s ease-in-out;
   font-family: 'Roboto', sans-serif;
+  background-color: #17726D;
 }
 
 nav.navbar.scrolled {
   padding: 0px 0;
-  background-color: #cfcec9;
+  background-color: #17726D;
 }
 
 nav.navbar a.navbar-brand {
@@ -211,4 +212,71 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-color: transparent;
+}
+
+/************ HomePage Css ************/
+
+.banner {
+  margin-top: 0;
+  padding: 100px 0 100px 0;
+  text-align: middle; /* Align elements to the left */
+  align-items: center;
+}
+
+.banner .tagline {
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 8px 10px;
+  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 60px;
+  margin-bottom: 16px;
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  display: inline-block;
+}
+
+.banner h1 {
+  font-size: 65px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.banner p {
+  color: #B8B8B8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  width: 96%;
+}
+
+.banner button {
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 60px;
+  letter-spacing: 0.8px;
+  display: flex;
+  align-items: center;
+  background-color: black; /* Change button background color to black */
+}
+
+.banner button svg {
+  font-size: 25px;
+  margin-left: 10px;
+  transition: 0.3s ease-in-out;
+  line-height: 1;
+}
+
+.banner button:hover svg {
+  margin-left: 25px;
+}
+
+.banner .image {
+  align-items: center;
+  width: 100%;
 }
